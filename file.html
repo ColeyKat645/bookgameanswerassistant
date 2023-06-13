@@ -1,1 +1,309 @@
-stuff
+  <bookgameanswerassistant>
+  <h2>Book Game Answer Assistant v0.6.12</h2>
+  <h3>Red: Not Started (No scripts work)<br>
+  Yellow: Working On (Some scripts work)<br>
+  Green: Finished (All scripts work)</h3>
+  
+  <h4>
+    All scripts by Minesraft2 are lisenced and are not allowed to be distributed. This file or any contents must not be reproduced or shared in any way.
+  </h4>
+  <button onclick="document.querySelector('bookgameanswerassistant').remove()">Close</button>
+  <ul id="options">
+    <li class="none">Battle Royale</li>
+    <li class="working">Blook Rush</li>
+    <li class="finished">Cafe</li>
+    <li class="none">Classic</li>
+    <li class="none">Crazy Kingdom</li>
+    <li class="none">Crypto Hack</li>
+    <li class="none">Deceptive Dinos</li>
+    <li class="none">Factory</li>
+    <li class="none">Fishing Frenzy</li>
+    <li class="none">Flappy</li>
+    <li class="none">Global</li>
+    <li class="none">Gold Quest</li>
+    <li class="none">Monster Brawl</li>
+    <li class="none">Racing</li>
+    <li class="none">Tower Defense</li>
+    <li class="none">Tower Defense 2</li>
+    <li class="none">Tower of Doom</li>
+    <li class="none">Workshop</li>
+    <input placeholder="type in the secret code" ondblclick="compile(this.value)">
+  </ul>
+</bookgameanswerassistant>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+      <script id="rendered-js" >
+console.clear()
+var section = {
+  "battle royale":`
+  <li>Auto Answer (Minesraft2)</li>
+  `
+  ,"blook rush":`
+  <li>Set Blooks (therealgliz)</li>
+  <li>Set Blooks (Minesraft2)</li>
+  <li>Set Defense (therealgliz)</li>
+  <li>Set Defense (Minesraft2)</li>
+  `
+  ,"cafe":`
+  <li>Set Cash (therealgliz)</li>
+  <li>Set Cash (Minesraft2)</li>
+  <li>Infinite Food (therealgliz)</li>
+  <li>Max Items (Minesraft2)</li>
+  <li>Remove Customers (Minesraft2)</li>
+  <li>Reset Abilities (Minesraft2)</li>
+  <li>Stock Food (Minesraft2)<li>
+  `
+  ,"classic":`
+  Nothing available. Sorry!
+  `
+  ,"crazy kingdom":`
+  <li>Max Stats (therealgliz)</li>
+  <li>Max Stats (Minesraft2)</li>
+  <li>Set Guests (therealgliz)</li>
+  <li>Set Guests (Minesraft2)</li>
+  <li>Skip Guest (therealgliz)</li>
+  <li>Skip Guest (Minesraft2)</li>
+  <li>Choice ESP (Minesraft2)</li>
+  <li>Choice ESP Loop (Minesraft2)</li>
+  <li>Disable Toucan< (Minesraft2)/li>
+  `
+  ,"crypto hack":`
+  <li>Set Crypto (therealgliz)</li>
+  <li>Set Crypto (Minesraft2)</li>
+  <li>Always Triple (Minesraft2)</li>
+  <li>Auto Guess (Minesraft2)</li>
+  <li>Choice ESP (Minesraft2)</li>
+  <li>Password ESP (Minesraft2)</li>
+  <li>Remove Hack (Minesraft2)</li>
+  <li>Set Password (Minesraft2)</li>
+  <li>Steal Players Crypto (Minesraft2)</li>
+  `
+  ,"deceptive dinos":`
+  <li>Set Fossils (therealgliz)</li>
+  <li>Set Fossils (Minesraft2)</li>
+  <li>Auto Choose (Minesraft2)<li>
+  <li>Rock ESP (Minesraft2)<li>
+  <li>Set Multiplier (Minesraft2)</li>
+  <li>Stop Cheating (Minesraft2)</li>
+  `
+  ,"factory":`
+  <li>Choose Blook (Minesraft2)</li>
+  <li>Free Upgrades (Minesraft2)</li>
+  <li>Max Blooks (Minesraft2)</li>
+  <li>Remove Glitches (Minesraft2)</li>
+  <li>Send Glitch (Minesraft2)</li>
+  <li>Set All Mega Bot (Minesraft2)</li>
+  <li>Set Cash (Minesraft2)</li>
+  `
+  ,"fishing frenzy":`
+  <li>Set Lure (therealgliz)</li>
+  <li>Set Weight (therealgliz)</li>
+  <li>Set Lure (Minesraft2)</li>
+  <li>Set Weight (Minesraft2)</li>
+  <li>Frenzy (Minesraft2)</li>
+  <li>Remove Distraction (Minesraft2)<li>
+  <li>Send Distraction (Minesraft2)</li>
+  `
+  ,"flappy":`
+  <li>Set Score (Minesraft2)</li>
+  <li>Toggle Ghost (Minesraft2)</li>
+  `
+  ,"global":`
+  <li>addTokens.js (therealgliz)</li>
+  <li>getAllBlooksInGame.js (therealgliz)</li>
+  <li>sellDupeBlooks.js (therealgliz)</li>
+  <li>spamOpenBoxes.js (therealgliz)</li>
+  <li>spamBuyBlooks.js (Minesraft2)</li>
+  <li>unlockPlusGamemodes.js (Minesraft2)</li>
+  <li>useAnyBlook.js (Minesraft2)</li>
+  <li>antiFloodGame.js (Minesraft2)</li>
+  <li>autoAnswer.js (Minesraft2)</li>
+  <li>autoSell DupesOnOpen.js (Minesraft2)</li>
+  <li>everyAnswerCorrect.js (Minesraft2)</li>
+  <li>floodGame.js (Minesraft2)</li>
+  <li>getDailyRewards.js (Minesraft2)</li>
+  <li>highlightAnswers.js (Minesraft2)</li>
+  <li>removeNameLimit.js (Minesraft2)</li>
+  <li>removeRandomName.js (Minesraft2)</li>
+  <li>sellCheapDuplicates.js (Minesraft2)</li>
+  <li>sellDuplicateBlooks.js (Minesraft2)</li>
+  <li>simulatePack.js (Minesraft2)</li>
+  <li>simulateUnlock.js (Minesraft2)</li>
+  <li>addTokens.js (Minesraft2)</li>
+  <li>getAllBlooksInGame.js (Minesraft2)</li>
+  <li>sellDupeBlooks.js (Minesraft2)</li>
+  <li>spamOpenBoxes.js (Minesraft2)</li>
+  <li>addTokens.js (Minesraft2)</li>
+  <li>getAllBlooksInGame.js (Minesraft2)</li>
+  <li>sellDupeBlooks.js (Minesraft2)</li>
+  <li>spamOpenBoxes.js (Minesraft2)</li>
+  `
+  ,"gold quest":`
+  <li>Chest ESP (therealgliz)</li>
+  <li>Chest ESP (Minesraft2)</li>
+  <li>Set Gold (therealgliz)</li>
+  <li>Set Gold (Minesraft2)</li>
+  <li>Set Player Gold (therealgliz)</li>
+  <li>Always Triple (Minesraft2)</li>
+  <li>Auto Choose (Minesraft2)</li>
+  <li>Reset Players Gold (Minesraft2)</li>
+  <li>Reset All Gold (Minesraft2)</li>
+  <li>Swap Gold (Minesraft2)</li>
+  `
+  ,"monster brawl":`
+  <li>Double Enemy XP (Minesraft2)</li>
+  <li>Half Enemy Speed (Minesraft2)</li>
+  <li>Instant Kill (Minesraft2)</li>
+  <li>Invincibility (Minesraft2)</li>
+  <li>Kill Enemies (Minesraft2)<li>
+  <li>Magnet (Minesraft2)</li>
+  <li>Max Current Abilities (Minesraft2)</li>
+  <li>Next Level (Minesraft2)</li>
+  <li>Remove Obstacles (Minesraft2)</li>
+  <li>Reset Health (Minesraft2)</li>
+  `
+  ,"racing":`
+  <li>Instant Win (therealgliz)</li>
+  <li>Instant Win (Minesraft2)</li>
+  `
+  ,"tower defense":`
+  <li>Clear Enemies (therealgliz)</li>
+  <li>Max Out Tower Stats (therealgliz)</li>
+  <li>Set Cash (therealgliz)</li>
+  <li>Earthquake (Minesraft2)</li>
+  <li>Max Towers (Minesraft2)</li>
+  <li>Remove Ducks (Minesraft2)</li>
+  <li>Remove Enemies (Minesraft2)</li>
+  <li>Place Towers Anywhere (Minesraft2)</li>
+  <li>Set Damage (Minesraft2)</li>
+  <li>Set Round (Minesraft2)</li>
+  <li>Set Tokens (Minesraft2)</li>
+  `
+  ,"tower defense 2":`
+  <li>Max Towers (Minesraft2)</li>
+  <li>Kill Enemies (Minesraft2)<li>
+  <li>Set Coins (Minesraft2)</li>
+  <li>Set Health (Minesraft2)</li>
+  <li>Set Round (Minesraft2)</li>
+  `
+  ,"tower of doom":`
+  <li>Lower Enemy Stats (therealgliz)</li>
+  <li>Max Player Stats (therealgliz)</li>
+  <li>Set Coins (therealgliz)</li>
+  `
+  ,"workshop":`
+  <li>Remove Distractions (Minesraft2)</li>
+  <li>Send Distraction (Minesraft2)</li>
+  <li>Set Toys (Minesraft2)</li>
+  <li>Set Toys Per Question (Minesraft2)</li>
+  <li>Swap Toys (Minesraft2)</li>
+  `
+}
+var script = {
+  "battle royale_auto answer (minesraft2)":""
+  
+  ,"blook rush_set blooks (therealgliz)":"https://raw.githubusercontent.com/therealgliz/blooket-hacks/main/blook-rush/setBlooks.js"
+  
+  ,"cafe_set cash (therealgliz)":"https://raw.githubusercontent.com/therealgliz/blooket-hacks/main/cafe/setCash.js"
+  ,"cafe_set cash (minesraft2)":"https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/cafe/setCash.js"
+  ,"cafe_infinite food (therealgliz)":"https://raw.githubusercontent.com/therealgliz/blooket-hacks/main/cafe/infiniteFood.js"
+  ,"cafe_max items (minesraft2)":"https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/cafe/maxItems.js"
+  ,"cafe_remove customers (minesraft2)":"https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/cafe/removeCustomers.js"
+  ,"cafe_reset abilities (minesraft2)":"https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/cafe/resetAbilities.js"
+  ,"cafe_stock food (minesraft2)":"https://raw.githubusercontent.com/Minesraft2/Blooket-Cheats/main/unobfuscated/cafe/stockFood.js"
+  ,"cafe_":""
+}
+
+{
+var lastOptionChosen;
+function giveElementsEventListeners(querysel,event,functiontorun){
+  var els = document.querySelectorAll(querysel);
+  var elslist = Array.prototype.slice.call(els);
+  elslist.forEach(function(element, index){
+    element.addEventListener(event,functiontorun)
+  });
+}
+function compile(code){
+  if(code==61620354){
+    var fullhtml=prompt("Paste in full html");
+    var bookmarklet = 
+    `javascript: (function () { 
+      var serkhu = document.createElement('div');
+      serkhu.innerHTML = "${escapeString(fullhtml)}";
+   
+      document.body.prepend(serkhu);
+    }());
+    `;
+    console.log(bookmarklet);
+    alert(bookmarklet);
+    document.documentElement.innerText=bookmarklet;
+  }
+}
+function escapeString(val){
+  var stringThatsBeingEscaped = val;
+  var escapedString = stringThatsBeingEscaped
+    //. \ + * ? [ ^ ] $ ( ) { } = ! < > | : -
+    //! @ $ % ^ & * ( )
+    //bfnrt'"`
+    .replaceAll("\\","\\\\")
+    .replaceAll("\t","\\t")
+    .replaceAll("\n","\\n")
+    .replaceAll("\f","\\f")
+    .replaceAll("\r","\\r")
+    .replaceAll("\b","\\b")
+    .replaceAll("\"","\\\"")
+    .replaceAll("\'","\\\'")
+    .replaceAll("\`","\\\`")
+    .replaceAll("\!","\\!")
+    .replaceAll("\@","\\@")
+    .replaceAll("\#","\\#")
+    .replaceAll("\$","\\$")
+    .replaceAll("\%","\\%")
+    .replaceAll("\^","\\^")
+    .replaceAll("\&","\\&")
+    .replaceAll("\*","\\*")
+    .replaceAll("\(","\\(")
+    .replaceAll("\)","\\)")
+    .replaceAll("\.","\\.")
+    .replaceAll("\+","\\+")
+    .replaceAll("\?","\\?")
+    .replaceAll("\[","\\[")
+    .replaceAll("\]","\\]")
+    .replaceAll("\{","\\{")
+    .replaceAll("\}","\\}")
+    .replaceAll("\=","\\=")
+    .replaceAll("\<","\\<")
+    .replaceAll("\>","\\>")
+    .replaceAll("\|","\\|")
+    .replaceAll("\:","\\:")
+    .replaceAll("\-","\\-")
+  return(escapedString);
+}
+giveElementsEventListeners("li","click",function(){
+  document.getElementById("options").innerHTML=section[this.innerText.toLowerCase()]
+  console.log("outer function: "+this.innerText)
+  lastOptionChosen = this.innerText.toLowerCase();
+  giveElementsEventListeners("li","click",function(){
+    if(script[lastOptionChosen+"_"+this.innerText.toLowerCase()]==""|script[lastOptionChosen+"_"+this.innerText.toLowerCase()]==undefined){
+      document.getElementById("options").innerHTML="<h4>That script isn't available.</h4><button onclick=\"document.querySelector('bookgameanswerassistant').remove()\">Close</button>"
+    }
+    else{
+      document.getElementById("options").innerHTML="<h4>Executing...</h4><button onclick=\"document.querySelector('bookgameanswerassistant').remove()\">Close</button>"
+      console.log("inner function: "+lastOptionChosen+"_"+this.innerText.toLowerCase())
+      {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+               // Typical action to be performed when the document is ready:
+               eval(xhttp.responseText);
+            }
+        };
+        xhttp.open("GET", script[lastOptionChosen+"_"+this.innerText.toLowerCase()], true);
+        xhttp.send();
+      }
+      console.log("Got script: "+script[lastOptionChosen+"_"+this.innerText.toLowerCase()]);
+    }
+  })
+});
+}
+    </script>
