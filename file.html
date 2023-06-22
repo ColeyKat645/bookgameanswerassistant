@@ -1,5 +1,6 @@
+
   <bookgameanswerassistant>
-  <h2>Book Game Answer Assistant v0.6.16</h2>
+  <h2>Book Game Answer Assistant v0.6.12</h2>
   <h3>Red: Not Started (No scripts work)<br>
   Yellow: Working On (Some scripts work)<br>
   Green: Finished (All scripts work)</h3>
@@ -34,7 +35,7 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
       <script id="rendered-js" >
 console.clear()
-var section = {
+var section = { 
   "battle royale":`
   <li>Auto Answer (Minesraft2)</li>
   ` 
@@ -241,62 +242,13 @@ var script = {
 
 {
 var lastOptionChosen;
-function giveElementsEventListeners(querysel,event,functiontorun){
-  var els = document.querySelectorAll(querysel);
-  var elslist = Array.prototype.slice.call(els);
-  elslist.forEach(function(element, index){
-    element.addEventListener(event,functiontorun)
-  });
-}
-function compile(code){
-  if(code==61620354){
-    var fullhtml=prompt("Update github");
-    if(fullhtml!==""|fullhtml){window.open("https://github.com/ColeyKat645/bookgameanswerassistant/edit/main/file.html");}
-    var bookmarklet = 
-    ` (function () { 
-      try{
-        var full;
-        var skript;
-        console.debug("var full,"+full);
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          console.debug("readystatechange");
-          if (this.readyState == 4 && this.status == 200) {
-            console.debug("readystate and status ok");
-            full = xhttp.responseText;
-            console.debug("make new full,"+full);
-            var serkhu = document.createElement('div');
-            console.debug("made div");
-            serkhu.innerHTML = full;
-            console.debug("made innerhtml,"+full);
-        
-            document.body.prepend(serkhu);
-            console.debug("appened. done.");
-            if(confirm("Inject script?")==true){
-              skript = document.getElementById("bookGameAnswerAssistantScript").innerHTML;
-              console.debug(skript);
-              eval(skript);
-            }
-          }
-        };
-        xhttp.open("GET", "https://raw.githubusercontent.com/ColeyKat645/bookgameanswerassistant/main/file.html", true);
-        xhttp.send();
-        console.debug("sent");
-      }
-      catch(error){
-        alert("An error has occured:\\n"+error);
-      }
-    }());
-    `;
-    console.log(bookmarklet);
-    var link = "<a href=\"javascript:"+encodeURIComponent(bookmarklet)+"\">Book Game Answer Assistant</a>";
-    console.log(link)
-    document.documentElement.innerHTML=link;
-  }
+function request(url,functiontorunparttwo){
+  
+  //die  
 }
 function escapeString(val){
-  var stringThatsBeingEscaped = val;
-  var escapedString = stringThatsBeingEscaped
+  alert("escape string says the val is\n\n"+val)
+  return val
     //. \ + * ? [ ^ ] $ ( ) { } = ! < > | : -
     //! @ $ % ^ & * ( )
     //bfnrt'"`
@@ -332,7 +284,74 @@ function escapeString(val){
     .replaceAll("\|","\\|")
     .replaceAll("\:","\\:")
     .replaceAll("\-","\\-")
-  return(escapedString);
+  
+}
+function giveElementsEventListeners(querysel,event,functiontorun){
+  var els = document.querySelectorAll(querysel);
+  var elslist = Array.prototype.slice.call(els);
+  elslist.forEach(function(element, index){
+    element.addEventListener(event,functiontorun)
+  });
+}
+function compile(code){
+  if(code==61620354){
+    //Tell to update github
+    var fullhtml=prompt("Update github");
+    //If they typed something then open github in a new tab
+    if(fullhtml!==""|fullhtml){window.open("https://github.com/ColeyKat645/bookgameanswerassistant/edit/main/file.html");}
+    //Create a new request variable
+    var xhttp = new XMLHttpRequest();
+    //When the request variable gets callled run this
+    xhttp.onreadystatechange = function() {
+        //If the request was succesful
+        if (this.readyState == 4 && this.status == 200) {
+          //Run this stuff
+          //Create new variable with escaped response
+          var htmlstuffthatshouldworkanditsescaped = escapeString(xhttp.responseText);
+          
+          //Create the bookmarklet
+          var bookmarklet = 
+          ` (function () { 
+            try{
+              var full;
+              var skript;
+              var htmlstuff = "${htmlstuffthatshouldworkanditsescaped}";
+              console.debug("var htmlstuff,"+htmlstuff);
+              var serkhu = document.createElement('div');
+              console.debug("made div");
+              serkhu.innerHTML = htmlstuff;
+              console.debug("made innerhtml,"+htmlstuff);
+              
+              document.body.prepend(serkhu);
+              console.debug("appened. done.");
+              if(confirm("Inject script?")==true){
+                skript = document.getElementById("bookGameAnswerAssistantScript").innerHTML;
+                console.debug("var skript, "+skript);
+                eval(skript);
+              }
+            }
+            catch(error){
+              alert("An error has occured:\\n"+error);
+            }
+          }());
+          `;
+          //Say the bookmarklet in the console
+          console.log(bookmarklet);
+          //Encode so its url safe and put it in an anchor tag
+          var link = "<a href=\"javascript:"+encodeURIComponent(bookmarklet)+"\">Book Game Answer Assistant</a>";
+          //Say the encoded bookmarklet in the console
+          console.log(link)
+          //Fill the document with the link to be dragged to the bookmarks
+          document.documentElement.innerHTML=link;
+        }
+    };
+    //Set the url to be requested
+    xhttp.open("GET", "https://raw.githubusercontent.com/ColeyKat645/bookgameanswerassistant/main/file.html", true);
+    //Send the request
+    xhttp.send();
+    
+    
+  }
 }
 giveElementsEventListeners("li","click",function(){
   document.getElementById("options").innerHTML=section[this.innerText.toLowerCase()]
